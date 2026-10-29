@@ -1,1 +1,436 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AcademicPro | Academic Support for Students</title>
+
+    <meta name="description"
+          content="AcademicPro provides professional proofreading, editing,
+          formatting, research guidance and academic support for students worldwide.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #243047;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .logo {
+            color: #1456a0;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #f0a500;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #243047;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #1456a0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #103d73, #1976b9);
+            color: white;
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 5vw, 55px);
+            line-height: 1.2;
+            max-width: 850px;
+            margin: 0 auto 22px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 32px;
+            color: #e6efff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 6px;
+        }
+
+        .button-primary {
+            background: #f0a500;
+            color: #17263c;
+        }
+
+        .button-primary:hover {
+            background: #ffc233;
+        }
+
+        .button-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .section {
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #103d73;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            max-width: 720px;
+            margin: 0 auto 38px;
+            color: #657187;
+        }
+
+        .services {
+            background: #f5f8fc;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 28px 22px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            text-align: left;
+        }
+
+        .service-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .service-card h3 {
+            color: #1456a0;
+            margin-bottom: 10px;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .step {
+            padding: 20px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            width: 48px;
+            height: 48px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #1456a0;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .contact {
+            background: #f5f8fc;
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 32px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+        }
+
+        .contact-box p {
+            margin-bottom: 18px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: #1456a0;
+            color: white;
+            padding: 13px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-button:hover {
+            background: #103d73;
+        }
+
+        footer {
+            background: #102b4e;
+            color: white;
+            text-align: center;
+            padding: 28px 8%;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Academic<span>Pro</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#process">How It Works</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <h1>Your Academic Journey Starts Here</h1>
+
+            <p>
+                Professional academic support for students worldwide.
+                Improve your writing, strengthen your research and present
+                your work with confidence.
+            </p>
+
+            <a href="#services" class="button button-primary">
+                Explore Our Services
+            </a>
+
+            <a href="#contact" class="button button-outline">
+                Get in Touch
+            </a>
+        </section>
+
+        <section class="section services" id="services">
+            <h2>Our Services</h2>
+
+            <p class="section-intro">
+                Practical academic support designed to help you communicate
+                your ideas clearly and develop your academic skills.
+            </p>
+
+            <div class="service-grid">
+
+                <div class="service-card">
+                    <div class="icon">✍️</div>
+                    <h3>Proofreading & Editing</h3>
+                    <p>
+                        Improve grammar, spelling, clarity and sentence
+                        structure while preserving your original ideas.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📚</div>
+                    <h3>Research Guidance</h3>
+                    <p>
+                        Get guidance on research questions, literature
+                        reviews, methodology and organizing your findings.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📝</div>
+                    <h3>Formatting & Referencing</h3>
+                    <p>
+                        Get help organizing documents and applying academic
+                        referencing styles such as APA, MLA and Harvard.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Data Analysis Support</h3>
+                    <p>
+                        Receive guidance on data organization, interpretation,
+                        tables, graphs and presenting research results.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="about-content">
+                <h2>About AcademicPro</h2>
+
+                <p>
+                    AcademicPro is designed to connect students with
+                    practical academic support wherever they study.
+                    Our goal is to make academic communication clearer,
+                    research more organized and learning more manageable.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    We encourage independent learning, original work,
+                    responsible research and academic integrity.
+                </p>
+            </div>
+        </section>
+
+        <section class="section services" id="process">
+            <h2>How It Works</h2>
+
+            <p class="section-intro">
+                Getting started is simple.
+            </p>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>
+                        Tell us about your academic support needs,
+                        project and deadline.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Discuss Your Request</h3>
+                    <p>
+                        Agree on the service, scope, delivery time
+                        and applicable price.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Support</h3>
+                    <p>
+                        Receive the agreed support and guidance
+                        for your academic work.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <h2>Let's Get Started</h2>
+
+            <p class="section-intro">
+                Have a question or need academic support?
+                Contact AcademicPro to discuss your requirements.
+            </p>
+
+            <div class="contact-box">
+                <p>
+                    Send us your service request, project details
+                    and preferred deadline.
+                </p>
+
+                <a class="contact-button"
+                   href="mailto:YOUR-EMAIL@example.com?subject=AcademicPro%20Service%20Request">
+                    Email AcademicPro
+                </a>
+
+                <p style="font-size: 13px; color: #657187; margin-top: 18px;">
+                    Please replace the sample email address with your
+                    actual business email before launching.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logo" style="color: white;">
+            Academic<span>Pro</span>
+        </div>
+
+        <p>Academic support for students worldwide.</p>
+
+        <p>
+            &copy; <span id="year"></span> AcademicPro.
+            All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
